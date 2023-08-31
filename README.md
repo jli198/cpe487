@@ -136,7 +136,7 @@ Required Equipment
 
 ## GRADING PROCEDURES
 
-Grades will be based on: |
+Grades will be based | on:
 --- | ---
 Attendance/Participation | 10 %
 Quizzes | 10%
@@ -144,7 +144,7 @@ Lab Assignments | 30%
 Project | 30%
 Final Exam (Comprehensive) | 20%
 
-Letter Grades |
+Grades | Letter
 --- | ---
 92.5-100 | A
 89.5 - 92.49 | A-

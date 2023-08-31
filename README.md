@@ -76,6 +76,7 @@ Week 15 | Project Presentation
 
 Special Dates:
 Date | Name/Type/Reason | Note
+--- | --- | ---
 Sept. 1 | Classes Begin |
 Sept. 4 | Labor Day | No Class
 Sept. 15 | Last day for Course Withdrawal without W |
@@ -135,16 +136,16 @@ Required Equipment
 
 ## GRADING PROCEDURES
 
-Grades will be based on:
-
+Grades will be based on: |
+--- | ---
 Attendance/Participation | 10 %
 Quizzes | 10%
 Lab Assignments | 30%
 Project | 30%
 Final Exam (Comprehensive) | 20%
 
-Letter Grades:
-
+Letter Grades |
+--- | ---
 92.5-100 | A
 89.5 - 92.49 | A-
 86.5 - 89.49 | B+

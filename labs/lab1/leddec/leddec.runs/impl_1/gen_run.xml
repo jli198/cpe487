@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1698113989">
+  <File Type="ROUTE-PWR" Name="leddec_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="leddec.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="leddec_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="leddec_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="leddec_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="leddec.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="leddec_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="leddec_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="leddec_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="leddec_opt.dcp"/>
+  <File Type="OPT-DRC" Name="leddec_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="leddec.hwdef"/>
+  <File Type="PWROPT-DCP" Name="leddec_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="leddec_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="leddec_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="leddec_placed.dcp"/>
+  <File Type="PLACE-IO" Name="leddec_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="leddec_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="leddec_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="leddec_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="leddec_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="leddec_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="leddec_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="leddec.bin"/>
+  <File Type="PLACE-TIMING" Name="leddec_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="leddec_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="leddec_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="leddec_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="leddec.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="leddec_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="leddec_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="leddec_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="leddec.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="leddec_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="leddec_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="leddec_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="leddec_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="leddec_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="leddec_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="leddec_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="leddec_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="leddec_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="leddec_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="leddec_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="leddec_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="leddec_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="leddec_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="leddec_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="leddec_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="leddec_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="leddec_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="leddec_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="leddec_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="leddec_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="leddec_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="leddec_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="leddec_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="leddec_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="leddec_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="leddec_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="leddec.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="leddec_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="leddec_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="leddec.nky"/>
+  <File Type="BITSTR-BMM" Name="leddec_bd.bmm"/>
+  <File Type="PDI-FILE" Name="leddec.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="leddec_soc.pdi"/>
+  <File Type="PL-PDI-FILE" Name="leddec_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="leddec.rcfi"/>
+  <File Type="CFI_FILE" Name="leddec.cfi"/>
+  <File Type="RNPI_FILE" Name="leddec.rnpi"/>
+  <File Type="NPI_FILE" Name="leddec.npi"/>
+  <File Type="RBD_FILE" Name="leddec.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="leddec.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="leddec.sysdef"/>
+  <File Type="BG-BGN" Name="leddec.bgn"/>
+  <File Type="BG-DRC" Name="leddec.drc"/>
+  <File Type="RDI-RDI" Name="leddec.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="leddec_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="leddec_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/leddec.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="leddec"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/leddec.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

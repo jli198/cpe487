@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1698341311">
+  <File Type="ROUTE-PWR" Name="hexcount_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hexcount.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="hexcount_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hexcount_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="hexcount_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="hexcount.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hexcount_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hexcount_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="hexcount_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="hexcount_opt.dcp"/>
+  <File Type="OPT-DRC" Name="hexcount_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hexcount.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hexcount_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="hexcount_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hexcount_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="hexcount_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hexcount_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hexcount_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hexcount_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hexcount_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hexcount_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hexcount_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hexcount_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="hexcount.bin"/>
+  <File Type="PLACE-TIMING" Name="hexcount_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="hexcount_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="hexcount_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hexcount_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="hexcount.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hexcount_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hexcount_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hexcount_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="hexcount.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="hexcount_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hexcount_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hexcount_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hexcount_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hexcount_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hexcount_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="hexcount_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hexcount_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hexcount_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hexcount_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="hexcount_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="hexcount_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hexcount_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hexcount_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hexcount_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hexcount_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hexcount_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="hexcount_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hexcount_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hexcount_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hexcount_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hexcount_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hexcount_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hexcount_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hexcount_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hexcount_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hexcount_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="hexcount.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hexcount_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hexcount_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="hexcount.nky"/>
+  <File Type="BITSTR-BMM" Name="hexcount_bd.bmm"/>
+  <File Type="PDI-FILE" Name="hexcount.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="hexcount_soc.pdi"/>
+  <File Type="PL-PDI-FILE" Name="hexcount_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="hexcount.rcfi"/>
+  <File Type="CFI_FILE" Name="hexcount.cfi"/>
+  <File Type="RNPI_FILE" Name="hexcount.rnpi"/>
+  <File Type="NPI_FILE" Name="hexcount.npi"/>
+  <File Type="RBD_FILE" Name="hexcount.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="hexcount.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="hexcount.sysdef"/>
+  <File Type="BG-BGN" Name="hexcount.bgn"/>
+  <File Type="BG-DRC" Name="hexcount.drc"/>
+  <File Type="RDI-RDI" Name="hexcount.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="hexcount_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="hexcount_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/leddec.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hexcount.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hexcount"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/hexcount.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/hexcount.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

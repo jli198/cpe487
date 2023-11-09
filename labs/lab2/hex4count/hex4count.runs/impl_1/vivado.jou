@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Nov  1 12:21:53 2023
+# Process ID: 22444
+# Current directory: D:/cpe487/hex4count/hex4count.runs/impl_1
+# Command line: vivado.exe -log hexcount.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hexcount.tcl -notrace
+# Log file: D:/cpe487/hex4count/hex4count.runs/impl_1/hexcount.vdi
+# Journal file: D:/cpe487/hex4count/hex4count.runs/impl_1\vivado.jou
+# Running On: JASONPC, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34198 MB
+#-----------------------------------------------------------
+source hexcount.tcl -notrace

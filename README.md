@@ -138,7 +138,7 @@ Required Equipment
 
 Grades will be based | on:
 --- | ---
-Attendance/Participation | 10 %
+Attendance/Participation | 10%
 Quizzes | 10%
 Lab Assignments | 30%
 Project | 30%

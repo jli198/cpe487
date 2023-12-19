@@ -2,7 +2,7 @@
 
 ## Objective
 
-* **Implemented on the Nexys A7-100T FPGA a low-pass and high-pass filter that will attenuate (or mute either the high or low frequencies in an audio signal).**
+* **Implemented on the Nexys A7-100T FPGA a low-pass and high-pass filter that will attenuate (or mute) either the high or low frequencies in an audio signal.**
 
 ## Physical Components
 
@@ -52,11 +52,66 @@
 
 Lab 5 was utilized as the base to implement a low and high pass filter. The team did not utilize the original Lab 5 code on GitHub as the base but rather the Modifications the team did for Lab 5 for submission that was utilized as the base code. This includes features to change the wail speed and to implement a square wave. </br>
 </br>
-To start, switches SW8 and S9 are going to be utilized to activate the low-pass (SW8) and high-pass (SW9). In [siren.xdc](), the statements `set_property -dict {PACKAGE_PIN IOSTANDARD LVCMOS33} [get_ports SW8]` and `set_property -dict {PACKAGE_PIN IOSTANDARD LVCMOS33} [get_ports SW9]` were inserted into lines 43 and 45 respectively. SW8 is assigned to Pin and SW9 is assigned to Pin. </br>
-</br>
-In [tone.vhd](), SW8 and SW9 are initialized as IN ports in the ENTITY tone similar to how switches and buttons are initialized in [siren.vhd](). </br>
+The report will take you through the flow of how data flows through each file and compiles into a single project.
+
+### siren.xdc
+
+To start, switches SW8 and S9 are going to be utilized to activate the low-pass filter (SW8) and high-pass filter (SW9). The statements </br>
+`set_property -dict {PACKAGE_PIN IOSTANDARD LVCMOS33} [get_ports SW8]` and </br>
+`set_property -dict {PACKAGE_PIN IOSTANDARD LVCMOS33} [get_ports SW9]` were inserted after SW7. </br>
+SW8 is assigned to Pin T8 and SW9 is assigned to Pin U8.
+
+### tone.vhd
+
+This is the main code where modifications are made. SW8 and SW9 are initialized as IN ports in the ENTITY tone: </br>
 `SW8 : IN STD_LOGIC;` </br>
-`SW9 : IN STD_LOGIC;` </br>
+`SW9 : IN STD_LOGIC);` </br>
+</br>
+In the behavioral architecutre of the tone module, signals are created for low pass and high pass versions of triangle and square wave: </br>
+`SIGNAL triangle_wave_lowpass : signed (15 DOWNTO 0);` </br>
+`SIGNAL triangle_wave_highpass : signed (15 DOWNTO 0);` </br>
+`SIGNAL square_wave_lowpass : signed (15 DOWNTO 0);` </br>
+`SIGNAL square_wave_highpass : signed (15 DOWNTO 0);` </br>
+</br>
+
+After the cnt_pr process begins, conditional statements are made to indicate that the low pass and high pass is initiated. </br>
+</br>
+There are multiple `WITH quad SELECT` statements. The gist for low pass SELECT statements is that the 1st and 2nd quadrants are set to the 16-bit representation of 0, as we want the lower frequencies in the signal to be attenuated (or muted). For high pass SELECT statements, the 3rd and 4th quadrants are set to the 16-bit representation of 0, as we want the higher frequencies in the signal to be attenuated. </br>
+</br>
+Afterwards, a PROCESS called button is initalized with inputs square_wave, square_wave_lowpass, square_wave_highpass, triangle_wave, triangle_wave_lowpass, triangle_wave_highpass. </br>
+The decision tree states that if the square button is pressed, it will go down the square wave conditional. Otherwise, it will go down the triangle wave conditional. Either way, it will generate the given wave but with possible alterations. </br>
+If SW8 is switched on, the low-pass filter will be engaged with the given wave. </br>
+If SW9 is switched on, the high-pass filter will be engaged with the given wave. </br>
+If both are switched on, both filters will be engaged with the given wave, producing a bandgap filter. </br>
+Otherwise, the regular wave of the conditional will be engaged.
+
+### wail.vhd
+
+For both the entity and behavioral architecutre of the wail module, SW8 and SW9 will be initialized as IN ports as in tone.vhd: </br>
+`SW8 : IN STD_LOGIC;` </br>
+`SW9 : IN STD_LOGIC);` </br>
+At the end of the wail module, an instance of tone is created and the outputs of tone.vhd are initialized as the inputs of wail.vhd. </br>
+In this case, SW8 and SW9 from tone.vhd and wail.vhd are paired together. </br>
+`SW8 => SW8, -- low pass` </br>
+`SW9 => SW9); -- high pass` </br>
+
+### dac_if.vhd
+
+dac_if.vhd is not modified at all for this project.
+
+### siren.vhd
+
+SW8 and SW9 are initialized as IN ports for the siren entity as like before. </br>
+`SW8 : IN STD_LOGIC;` </br>
+`SW9 : IN STD_LOGIC);` </br>
+</br>
+In the behavioral architecture of siren, the wail component has SW8 and SW9 initialized like in the siren entity: </br>
+`SW8 => SW8, -- low pass` </br>
+`SW9 => SW9); -- high pass` </br>
+</br>
+An instance of dac_if called dac AND two instances of wail called w1 and w2 is created. w1 and w2 portmap and map the SW8 and SW9 from wail.vhd to the input SW8 and SW9 in siren.vhd.
+`SW8 => SW8, -- low pass` </br>
+`SW9 => SW9); -- high pass` </br>
 
 ## Summary
 

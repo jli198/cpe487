@@ -14,22 +14,22 @@ ENTITY siren IS
 		bt_lowpass : IN STD_LOGIC;
 		bt_highpass : IN STD_LOGIC;
 		bt_reset_high: IN STD_LOGIC;
-	    bt_reset_low: IN STD_LOGIC;
-        SW0 : IN STD_LOGIC;
-        SW1 : IN STD_LOGIC;
-        SW2 : IN STD_LOGIC;
-        SW3 : IN STD_LOGIC;
-        SW4 : IN STD_LOGIC;
-        SW5 : IN STD_LOGIC;
-        SW6 : IN STD_LOGIC;
-        SW7 : IN STD_LOGIC;
-        SW8 : IN STD_LOGIC;
-        SW9 : IN STD_LOGIC;
-        SW10 : IN STD_LOGIC;
-        SEG7_anode : OUT STD_LOGIC_VECTOR (7 DOWNTO 0); -- anodes of eight 7-seg displays
+	  bt_reset_low: IN STD_LOGIC;
+    SW0 : IN STD_LOGIC;
+    SW1 : IN STD_LOGIC;
+    SW2 : IN STD_LOGIC;
+    SW3 : IN STD_LOGIC;
+    SW4 : IN STD_LOGIC;
+    SW5 : IN STD_LOGIC;
+    SW6 : IN STD_LOGIC;
+    SW7 : IN STD_LOGIC;
+    SW8 : IN STD_LOGIC;
+    SW9 : IN STD_LOGIC;
+    SW10 : IN STD_LOGIC;
+    SEG7_anode : OUT STD_LOGIC_VECTOR (7 DOWNTO 0); -- anodes of eight 7-seg displays
 		SEG7_seg : OUT STD_LOGIC_VECTOR (6 DOWNTO 0); -- common segments of 7-seg displays
-        KB_col : OUT STD_LOGIC_VECTOR (4 DOWNTO 1); -- keypad column pins
-	    KB_row : IN STD_LOGIC_VECTOR (4 DOWNTO 1) -- keypad row pins
+    KB_col : OUT STD_LOGIC_VECTOR (4 DOWNTO 1); -- keypad column pins
+	  KB_row : IN STD_LOGIC_VECTOR (4 DOWNTO 1) -- keypad row pins
 	);
 END siren;
 
@@ -56,16 +56,15 @@ ARCHITECTURE Behavioral OF siren IS
 			audio_clk : IN STD_LOGIC;
 			audio_data : OUT SIGNED (31 DOWNTO 0);
 			SW8 : IN STD_LOGIC;
-            SW9 : IN STD_LOGIC;
-            SW10 : IN STD_LOGIC;
-            high_pass: IN unsigned  (7 DOWNTO 0);
-            low_pass: IN unsigned  (7 DOWNTO 0);
+      SW9 : IN STD_LOGIC;
+      SW10 : IN STD_LOGIC;
+      high_pass: IN unsigned  (7 DOWNTO 0);
+      low_pass: IN unsigned  (7 DOWNTO 0);
 			bt_square : IN STD_LOGIC;
 			bt_lowpass: IN STD_LOGIC;
-	        bt_highpass: IN STD_LOGIC;
-	        bt_reset_high: IN STD_LOGIC;
-	        bt_reset_low: IN STD_LOGIC);
-		--);
+	    bt_highpass: IN STD_LOGIC;
+	    bt_reset_high: IN STD_LOGIC;
+	    bt_reset_low: IN STD_LOGIC);
 	END COMPONENT;
 	COMPONENT keypad IS
 		PORT (
@@ -128,13 +127,13 @@ BEGIN
 	dac_SCLK <= sclk; -- also sent to DAC as SCLK
 	slo_clk <= tcount(19); -- clock to control wailing of tone (47.6 Hz)
 	wail_speed(0) <= SW0;
-    wail_speed(1) <= SW1;
-    wail_speed(2) <= SW2;
-    wail_speed(3) <= SW3;
-    wail_speed(4) <= SW4;
-    wail_speed(5) <= SW5;
-    wail_speed(6) <= SW6;
-    wail_speed(7) <= SW7;
+  wail_speed(1) <= SW1;
+  wail_speed(2) <= SW2;
+  wail_speed(3) <= SW3;
+  wail_speed(4) <= SW4;
+  wail_speed(5) <= SW5;
+  wail_speed(6) <= SW6;
+  wail_speed(7) <= SW7;
 	dac : dac_if
 	PORT MAP(
 		SCLK => sclk, -- instantiate parallel to serial DAC interface
@@ -172,15 +171,15 @@ BEGIN
 			audio_clk => audio_clk, 
 			audio_data => data_R,
 			SW8 => SW8, -- low pass
-            SW9 => SW9, -- high pass
-            SW10 => SW10,
+      SW9 => SW9, -- high pass
+      SW10 => SW10,
 			bt_square => bt_square,
 			bt_lowpass => bt_lowpass,
-		    bt_highpass => bt_highpass,
-		    bt_reset_high => bt_reset_high,
-		    bt_reset_low => bt_reset_low,
-		    high_pass => high_pass,
-		    low_pass => low_pass
+		  bt_highpass => bt_highpass,
+		  bt_reset_high => bt_reset_high,
+		  bt_reset_low => bt_reset_low,
+		  high_pass => high_pass,
+		  low_pass => low_pass
 		);
 		kp_clk <= cnt(15); -- keypad interrogation clock
 	    sm_clk <= cnt(20); -- state machine clock

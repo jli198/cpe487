@@ -9,8 +9,11 @@
 * Nexys A7-100T FPGA
 * Pmod [I2S (Inter-IC Sound)](https://en.wikipedia.org/wiki/I%C2%B2S) 24-bit [Digital-to-Analog Converter (DAC)](https://en.wikipedia.org/wiki/Digital-to-analog_converter) is required and connects to the [top 6 pins of the Pmod JA port](https://reference.digilentinc.com/_media/reference/programmable-logic/nexys-a7/nexys-a7_rm.pdf).
 * Pmod I2S also requires a [3.5-mm connector](https://en.wikipedia.org/wiki/Phone_connector_(audio)) to a speaker or headphones.
+* 16-button keypad module ([Pmod KYPD](https://store.digilentinc.com/pmod-kypd-16-button-keypad/)) connected to the Pmod port JA (See Section 10 of the [Reference Manual](https://reference.digilentinc.com/_media/reference/programmable-logic/nexys-a7/nexys-a7_rm.pdf)) directly or via an optional [2x6-pin cable](https://digilent.com/shop/2x6-pin-pmod-cable/) with three dots (or VDD/GND) facing up on both ends
 
 ![PMODI2S](i2s.png)
+
+![Keypad](kypd.png)
 
 ## File Components
 
@@ -141,7 +144,7 @@ dig indicates which digit of the 8 bits. 4-bit signal data4 was created and take
 
 ### dac_if.vhd
 
-dac_if.vhd is not modified at all for this project.
+dac_if.vhd is only modified so that L_data, R_data, and sreg is 32 bits and not 16 bits (this ended up not working in the code).
 
 ### siren.vhd
 
@@ -156,9 +159,20 @@ In the behavioral architecture of siren, the wail component has SW8 and SW9 init
 An instance of dac_if called dac AND two instances of wail called w1 and w2 is created. w1 and w2 portmap and map the SW8 and SW9 from wail.vhd to the input SW8 and SW9 in siren.vhd.
 `SW8 => SW8, -- low pass` </br>
 `SW9 => SW9); -- high pass` </br>
+</br>
+Other ports and signals are initialized in components, entities, and behavioral architecture as well as necessary portmaps from the files (see System Block Diagram below)
+
+![System Diagram](sysDiagram.jpg)
+
+The FSM machine comes from hexcalc Lab 4. But, instead of btn_clear, the reset_high and reset_low buttons are used instead. Then, instead of btn_eq, the team used SW10. The point of this is accummulate stores the value and it is 32 bits long because it keeps track of 8 hexadecimal values and is 32 bits of binary. However, the team wants high-pass and low-pass to be 8 bits long so it is the same length as the wail speed vecotr. So in order to assign it, each bit of high_pass is assigned to a bit_mulitple of acc. A hexadecimal '0' is 4 '0's in binary (X"0" = 0b"0000") and a hexadecimal is 1 and 3 '0's and a 1 (X'1" = 0b"0001"). Therefore, the team only needs to observe the bit multiples of 4 to determine if it is a 0 or a 1 and this is how the team assigns values to high-pass and low-pass. In theory, after assigning a value to high-pass and low-pass, the value will be pushed as an input to wail.vhd then tone.vhd then the threshold will be based on user input from the hexcalc compared to it being hardcoded. This did not work out.
 
 ## Summary
 
-Marc worked on implementing the VHDL modifications to the Siren project. Jason was responsible for additional research in converting the siren signals to be attenuated at either low or high frequencies. Xavion documented the process the team went through as well as any hardships that happened along the way.</br>
+Marc worked on implementing the VHDL modifications to the Siren project. Jason was responsible for additional research by referencing various labs that were done in the past and also documented the technical details of the project. Xavion documented the process the team went through as well as any hardships that happened along the way as well as created the presentation and presented it.</br>
 </br>
 Over the weekend, Marc took the equipment home, but the team realized that the DAC brought home was broken, so Marc had to go back into the lab and grabbed a working one. </br>
+The team thought doubling the size of count and data would make the amplitude higher but it didn't. It ended up staying the same. </br>
+</br>
+The team had a wrong idea of frequency and the team was changing the amplitude thinking that it changed the frequency. The team had a misunderstanding that the triangle and square wave represented different frequencies and not different amplitudes. Cutoff values were implemented as we thought it was frequencies but the code generates one frequency and the waveforms are just amplitudes of the frequencies. The team made cutoff not based on amplitude but on wailspeed. </br>
+</br>
+If the team had more time, the team would see if the hexcalc keypad could accept inputs that would allow for the low-pass and high-pass thresholds to be dynamically reconfigured rather than having the thresholds be statically hard coded into the project at hand.

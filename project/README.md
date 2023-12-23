@@ -176,3 +176,9 @@ The team thought doubling the size of count and data would make the amplitude hi
 The team had a wrong idea of frequency and the team was changing the amplitude thinking that it changed the frequency. The team had a misunderstanding that the triangle and square wave represented different frequencies and not different amplitudes. Cutoff values were implemented as we thought it was frequencies but the code generates one frequency and the waveforms are just amplitudes of the frequencies. The team made cutoff not based on amplitude but on wailspeed. </br>
 </br>
 If the team had more time, the team would see if the hexcalc keypad could accept inputs that would allow for the low-pass and high-pass thresholds to be dynamically reconfigured rather than having the thresholds be statically hard coded into the project at hand.
+
+## Project Feedback
+
+Missing some requested information on the github page and minor coding issues like implementation of user inputs, but a very solid attempt.
+
+This does not reflect your project presentation which is a separate "grade", but this is the component with the much larger weighting towards the overall project grade. If you have any specific concerns please let me know.

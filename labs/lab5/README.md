@@ -110,3 +110,4 @@ Program the FPGA on the Nexys A7-100T board to generate a wailing audio siren us
 
 * Note: you will need headphones or another wired device with left and right audio output channels to hear both channels at once. If you do not have immediate access to such a device, modify your code to include a button press that toggles the primary output between the left and right audio channels in some way.
 
+## Grade: 95/100

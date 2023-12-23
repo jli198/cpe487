@@ -95,3 +95,8 @@
 ![hexcounter.gif](https://github.com/kevinwlu/dsd/blob/master/Nexys-A7/Lab-2/hexcounter.gif)
 
 * POWER OFF > Move the blue MODE jumper on the board from QSPI to JTAG
+
+## Lab Report Feedback - 95%
+
+More specifically for the "only flip between 0 and 1 one time" requirement, we would likely never recognize other types of sequences as part of the counter logic. There are a couple of exceptions (the very smallest bit keeps flipping back and forth between 0 and 1, and the second smallest bit keeps repeating 00110011...), but this is the only approach that will actually work for the vast majority of the bits we are observing. </br>
+This can be remedied by explaining that detecting a bit flip only once is easier for the program to find.

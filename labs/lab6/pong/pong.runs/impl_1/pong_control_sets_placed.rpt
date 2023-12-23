@@ -1,0 +1,95 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Nov 28 13:04:16 2023
+| Host         : JASONPC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file pong_control_sets_placed.rpt
+| Design       : pong
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    74 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    17 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              51 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              34 |           14 |
+| Yes          | No                    | No                     |              28 |            9 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              45 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+----------------------------------+-------------------------------+------------------+----------------+--------------+
+|         Clock Signal        |           Enable Signal          |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+----------------------------------+-------------------------------+------------------+----------------+--------------+
+|  clk_wiz_0_inst/U0/clk_out1 |                                  | vga_driver/hsync0             |                1 |              1 |         1.00 |
+|  clk_wiz_0_inst/U0/clk_out1 | vga_driver/eqOp                  |                               |                1 |              1 |         1.00 |
+|  VGA_vsync_OBUF_BUFG        | add_bb/ball_y_motion1            | add_bb/hit_count              |                1 |              4 |         4.00 |
+|  VGA_vsync_OBUF_BUFG        | add_bb/display_count[3]_i_1_n_0  |                               |                1 |              4 |         4.00 |
+|  VGA_vsync_OBUF_BUFG        |                                  | add_bb/ball_y0                |                2 |              5 |         2.50 |
+|  VGA_vsync_OBUF_BUFG        |                                  | add_bb/ball_y[10]_i_1_n_0     |                3 |              6 |         2.00 |
+|  VGA_vsync_OBUF_BUFG        | add_bb/ball_y_motion[10]_i_1_n_0 |                               |                2 |              6 |         3.00 |
+|  VGA_vsync_OBUF_BUFG        |                                  |                               |                5 |              7 |         1.40 |
+|  VGA_vsync_OBUF_BUFG        | add_bb/ball_x_motion[10]_i_1_n_0 |                               |                2 |              7 |         3.50 |
+|  ADC_CS_OBUF                |                                  |                               |                2 |              9 |         4.50 |
+|  clk_wiz_0_inst/U0/clk_out1 | vga_driver/eqOp                  | vga_driver/v_cnt0             |                3 |              9 |         3.00 |
+|  clk_in_IBUF_BUFG           |                                  |                               |                3 |             10 |         3.33 |
+|  VGA_vsync_OBUF_BUFG        |                                  | add_bb/ball_x_reg[10]_i_1_n_4 |                3 |             11 |         3.67 |
+|  count_reg[4]               | adc/pdata2[11]_i_1_n_0           |                               |                3 |             11 |         3.67 |
+|  clk_wiz_0_inst/U0/clk_out1 |                                  | vga_driver/clear              |                5 |             11 |         2.20 |
+|  clk_wiz_0_inst/U0/clk_out1 |                                  |                               |               11 |             25 |         2.27 |
+|  VGA_vsync_OBUF_BUFG        | add_bb/ball_y_motion1            | add_bb/bat_w[0]_i_1_n_0       |                8 |             32 |         4.00 |
++-----------------------------+----------------------------------+-------------------------------+------------------+----------------+--------------+
+
+
